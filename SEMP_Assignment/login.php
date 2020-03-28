@@ -24,7 +24,7 @@
             <a href="register.html">Register Now</a>
         </div>
         <div class="message">
-            <?php echo $_GET['error'] ?>
+            <?php echo $_GET['message'] ?>
         </div>
     </form>
 

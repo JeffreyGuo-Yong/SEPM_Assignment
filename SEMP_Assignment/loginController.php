@@ -10,10 +10,11 @@ $password = $_POST['password'];
 $id = login($email, $password);
 
 if(is_numeric($id) == 1){
+    $_SESSION['id'] = $id;
     header("location:userIndex.php");
 }else{
     $error = getErrorMessage($id);
-    header("location:login.php?error=$error");
+    header("location:login.php?message=$error");
 }
 
 ?>

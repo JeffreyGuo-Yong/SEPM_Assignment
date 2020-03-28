@@ -1,3 +1,7 @@
+<?php
+require "functions.php";
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,7 @@
 <body class="mainBody">
 
 <div class="mainTop">
-    <div class="title">Welcome: XXXXXXXXXXXXXXXX</div>
+    <div class="title">Welcome: <?php echo getUserName($_SESSION['id'])?></div>
     <div>
         <button type="button" class="button" onclick="">Logout</button>
     </div>
