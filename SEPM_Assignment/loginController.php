@@ -13,7 +13,7 @@ if(is_numeric($id) == 1){
     $_SESSION['id'] = $id;
     header("location:userIndex.php");
 }else{
-    $error = getErrorMessage($id);
+    $error = getMessage($id);
     header("location:login.php?message=$error");
 }
 

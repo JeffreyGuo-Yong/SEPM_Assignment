@@ -15,16 +15,16 @@ session_start();
 <div class="mainTop">
     <div class="title">Welcome: <?php echo getUserName($_SESSION['id'])?></div>
     <div>
-        <button type="button" class="button" onclick="">Logout</button>
+        <button type="button" class="button" onclick="window.location.href='logoutController.php'">Logout</button>
     </div>
 </div>
 <div class="mainLeft">
     <ul>
-        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="">Order Diary</a> </li>
+        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="orderDiary.php" target="userIframe">Order Diary</a> </li>
         <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="">Order History</a> </li>
         <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="">My Feedback</a> </li>
-        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="">My Address</a> </li>
-        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="">My Payment</a> </li>
+        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="address.php" target="userIframe">My Address</a> </li>
+        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="payment.php" target="userIframe">My Payment</a> </li>
     </ul>
 </div>
 <div class="mainRight">

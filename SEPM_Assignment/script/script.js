@@ -93,3 +93,7 @@ function changePaymentType() {
         cvv.setAttribute("disabled", "disabled");
     }
 }
+
+function userEditAddress(id){
+    window.location.href = "updateAddress.php?id=" + id;
+}

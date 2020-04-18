@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Payment Method</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script type="text/javascript" src="script/script.js"></script>
+</head>
+<body>
+
+<div class="addPaymentMain">
+
+    <form action="addPaymentController.php" method="post">
+
+        <div class="radioDiv">
+            <div class="paymentTypeTitle">Payment Method:</div>
+            <div class="paymentType">
+                <div class="option">
+                    <input type="radio" name="paymentMethod" value="Card" checked="checked" onclick="changePaymentType()">
+                </div>
+                <div class="optionName">
+                    Card
+                </div>
+                <div class="option">
+                    <input type="radio" name="paymentMethod" value="PayPal" onclick="changePaymentType()">
+                </div>
+                <div class="optionName">
+                    PayPal
+                </div>
+            </div>
+        </div>
+
+        <div class="inputDiv">
+            <input class="input" id="holder" type="text" placeholder="Card Holder" name="holder">
+        </div>
+
+        <div class="inputDiv">
+            <input class="input" id="account" type="text" placeholder="Account Number" name="account">
+        </div>
+
+        <div class="inputDiv">
+            <input class="input" id="date" type="text" placeholder="Expire Date" name="date">
+        </div>
+
+        <div class="inputDiv">
+            <input class="input" id="cvv" type="text" placeholder="CVV" name="cvv">
+        </div>
+
+        <div class="buttonDiv">
+            <button type="button" onclick="window.location.href='payment.php'">Back</button>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

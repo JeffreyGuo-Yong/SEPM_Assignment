@@ -18,10 +18,11 @@
             <input class="input" type="password" placeholder="Password" name="password">
         </div>
         <div>
+            <button class="button" type="button" onclick="window.location.href='index.php'">Back</button>
             <button class="button" type="submit">Login</button>
         </div>
         <div class="register">
-            <a href="register.html">Register Now</a>
+            <a href="register.php">Register Now</a>
         </div>
         <div class="message">
             <?php echo $_GET['message'] ?>

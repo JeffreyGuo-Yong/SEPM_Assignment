@@ -1,8 +1,0 @@
-{
-  "error1" : {
-    "content" : "wrong username or password"
-  },
-  "error2" : {
-    "content" : "user has been locked"
-  }
-}
