@@ -10,6 +10,7 @@ $result = getPaymentByUserID($id);
     <meta charset="UTF-8">
     <title>My Payment Method</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script type="text/javascript" src="script/script.js"></script>
 </head>
 <body>
 
@@ -35,7 +36,9 @@ $result = getPaymentByUserID($id);
                     echo "<tr>";
                     echo "<td class='title'>Type:</td>";
                     echo "<td colspan='3'>" . $row['type'] . "</td>";
-                    echo "<td class='button' rowspan='4'>" . "<button type='button'>Edit</button>" . "</td>";
+                    echo "<td class='button' rowspan='4'>";
+                    echo "<button type='button' onclick='userEditPayment(" . $row['id'] . ")'>Edit</button>";
+                    echo "</td>";
                     echo "</tr>";
 
                     echo "<tr>";

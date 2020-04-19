@@ -70,14 +70,17 @@
                     <div class="paymentMethod">
                         <div class="inputTitle">Payment Method:</div>
                         <div class="paymentMethodOption">
-                            <input type="radio" name="paymentMethod" value="Card"><span>Card</span>
-                            <input type="radio" name="paymentMethod" value="PayPal"><span>PayPal</span>
+                            <input type="radio" name="paymentMethod" value="Card" checked="checked" onclick="changePaymentOption()"><span>Card</span>
+                            <input type="radio" name="paymentMethod" value="PayPal" onclick="changePaymentOption()"><span>PayPal</span>
                         </div>
                     </div>
                     <div class="paymentAccount">
                         <div class="inputTitle">Payment Account:</div>
-                        <select>
-
+                        <select id="Card">
+                            <option>Card Option</option>
+                        </select>
+                        <select id="PayPal" hidden="hidden">
+                            <option>PayPal Option</option>
                         </select>
                     </div>
                     <div class="address">

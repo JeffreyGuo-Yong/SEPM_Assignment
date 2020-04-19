@@ -28,5 +28,11 @@
   },
   "addressUpdateFailed" : {
     "content" : "Update Address Information Failed"
+  },
+  "paymentUpdateSuccess" : {
+    "content" : "Update Payment Method Success"
+  },
+  "paymentUpdateFailed" : {
+    "content" : "Update Payment Method Failed"
   }
 }

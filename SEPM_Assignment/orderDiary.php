@@ -1,3 +1,12 @@
+<?php
+require "functions.php";
+session_start();
+$id = $_SESSION['id'];
+
+$addressOptions = getAddressOptionsByUserID($id);
+$cardOptions = getCardPaymentOptionsByUserID($id);
+$paypalOptions = getPayPalPaymentOptionsByUserID($id);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,20 +79,53 @@
                 <div class="paymentMethod">
                     <div class="inputTitle">Payment Method:</div>
                     <div class="paymentMethodOption">
-                        <input type="radio" name="paymentMethod" value="Card"><span>Card</span>
-                        <input type="radio" name="paymentMethod" value="PayPal"><span>PayPal</span>
+                        <input type="radio" name="paymentMethod" value="Card" checked="checked" onclick="changePaymentOption()"><span>Card</span>
+                        <input type="radio" name="paymentMethod" value="PayPal" onclick="changePaymentOption()"><span>PayPal</span>
                     </div>
                 </div>
                 <div class="paymentAccount">
                     <div class="inputTitle">Payment Account:</div>
-                    <select>
-
+                    <select id="Card">
+                        <?php
+                            if($cardOptions->num_rows == 0){
+                                echo "<option> No Card Payment Method, Please Add Payment Method </option>";
+                            }else{
+                                while($card = $cardOptions->fetch_assoc()){
+                                    echo "<option value='" . $card['id'] ."'>";
+                                    echo $card['type'] . " : " . $card['account'];
+                                    echo "</option>";
+                                }
+                            }
+                        ?>
+                    </select>
+                    <select id="PayPal" hidden="hidden">
+                        <?php
+                            if($paypalOptions->num_rows == 0){
+                                echo "<option> No PayPal Payment Method, Please Add Payment Method </option>";
+                            }else{
+                                while($paypal = $paypalOptions->fetch_assoc()){
+                                    echo "<option value='" . $paypal['id'] ."'>";
+                                    echo $paypal['type'] . " : " . $paypal['account'];
+                                    echo "</option>";
+                                }
+                            }
+                        ?>
                     </select>
                 </div>
                 <div class="address">
                     <div class="inputTitle">Address:</div>
                     <select>
-
+                        <?php
+                            if($addressOptions->num_rows == 0){
+                                echo "<option> No Address, Please Add New Address </option>";
+                            }else{
+                                while($address = $addressOptions->fetch_assoc()){
+                                    echo "<option value='" . $address['id'] . "'>";
+                                    echo $address['name'] . " : " . $address['address'];
+                                    echo "</option>";
+                                }
+                            }
+                        ?>
                     </select>
                 </div>
                 <div class="postage">

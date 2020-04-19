@@ -158,4 +158,37 @@ function updatePayment($holder, $account, $date, $cvv, $id){
     }
 }
 
+function getAddressOptionsByUserID($id){
+    $con = getConnection();
+
+    $sql = "select id, name, address from address where user_id = $id";
+
+    $result = $con->query($sql);
+    $con->close();
+
+    return $result;
+}
+
+function getCardPaymentOptionsByUserID($id){
+    $con = getConnection();
+
+    $sql = "select id, type, account from payment where user_id = $id and type = 'Card'";
+
+    $result = $con->query($sql);
+    $con->close();
+
+    return $result;
+}
+
+function getPayPalPaymentOptionsByUserID($id){
+    $con = getConnection();
+
+    $sql = "select id, type, account from payment where user_id = $id and type = 'PayPal'";
+
+    $result = $con->query($sql);
+    $con->close();
+
+    return $result;
+}
+
 ?>

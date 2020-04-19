@@ -93,3 +93,21 @@ function changePaymentType() {
         cvv.setAttribute("disabled", "disabled");
     }
 }
+
+function changePaymentOption() {
+    var paymentType = document.getElementsByName("paymentMethod");
+    var type;
+    for(var i = 0; i < paymentType.length; i++){
+        if(paymentType[i].checked){
+            type = paymentType[i].value;
+        }
+    }
+
+    if(type == "Card"){
+        document.getElementById("Card").removeAttribute("hidden");
+        document.getElementById("PayPal").setAttribute("hidden", "hidden");
+    }else{
+        document.getElementById("PayPal").removeAttribute("hidden");
+        document.getElementById("Card").setAttribute("hidden", "hidden");
+    }
+}
