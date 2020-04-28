@@ -2,9 +2,10 @@
 This is the team assignment for SEPM
 
 # Contribution
-
+Yong Guo (Jeffery)
 
 # Maintainers
+Yong Guo (Jeffery)
 
 
 # Install
@@ -16,17 +17,18 @@ System: MacOs
 
 
 # Change Log
-v1.1.0  
-
+v0.0.0  
+Complete the front page
   
-v1.1.1  
-
+v0.0.1  
+Complete the registration function.
   
-v1.1.2  
-
+v0.0.2  
+Complete login function
   
-v1.1.3  
-
+v0.0.3  
+Complete the function of editing diary
   
-v1.1.4  
-
+v0.0.4  
+Complete adding address function
+Complete adding the payment method function
