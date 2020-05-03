@@ -18,10 +18,14 @@ function paperColorType() {
         document.getElementById("paperColor").removeAttribute("disabled");
         document.getElementById("paperTheme").setAttribute("disabled","disabled");
         document.getElementById("diaryPrice").innerHTML = "$10";
+        document.getElementById("unitPrice").setAttribute("value", "10");
+        getTotalPrice();
     }else{
         document.getElementById("paperTheme").removeAttribute("disabled");
         document.getElementById("paperColor").setAttribute("disabled","disabled");
         document.getElementById("diaryPrice").innerHTML = "$15";
+        document.getElementById("unitPrice").setAttribute("value", "15");
+        getTotalPrice();
     }
 }
 
@@ -37,14 +41,18 @@ function changePaperColorType(){
         document.getElementById("paperColor").removeAttribute("disabled");
         document.getElementById("paperTheme").setAttribute("disabled","disabled");
         document.getElementById("diaryPrice").innerHTML = "$10";
+        document.getElementById("unitPrice").setAttribute("value", "10");
+        getTotalPrice();
     }else{
         document.getElementById("paperTheme").removeAttribute("disabled");
         document.getElementById("paperColor").setAttribute("disabled","disabled");
         document.getElementById("diaryPrice").innerHTML = "$15";
+        document.getElementById("unitPrice").setAttribute("value", "15");
+        getTotalPrice();
     }
 }
 
-function getTotalPrice(total) {
+function getTotalPrice() {
     var paperColorType = document.getElementsByName("paperColorType");
     var type;
     for(var i = 0; i < paperColorType.length; i++){
@@ -53,14 +61,14 @@ function getTotalPrice(total) {
         }
     }
     var quantity = document.getElementById("quantity").value;
-    var totalPrice;
-    if(type == "color"){
-        totalPrice = 10 * quantity;
-        document.getElementById("totalPrice").innerHTML = "$"+totalPrice;
-    }else{
-        totalPrice = 15 * quantity;
-        document.getElementById("totalPrice").innerHTML = "$"+totalPrice;
-    }
+    var unitPrice = document.getElementById("unitPrice").value;
+    var postage = document.getElementById("postage").value;
+
+    var totalPrice = parseInt(quantity) * parseFloat(unitPrice);
+    var totalPriceIncludePostage = totalPrice + parseFloat(postage);
+
+    document.getElementById("totalPrice").innerHTML = "$"+totalPrice;
+    document.getElementById("totalPriceInput").setAttribute("value", totalPriceIncludePostage);
 }
 
 function changePaymentType() {
@@ -113,9 +121,19 @@ function changePaymentOption() {
 
     if(type == "Card"){
         document.getElementById("Card").removeAttribute("hidden");
+        document.getElementById("Card").removeAttribute("disabled");
+
         document.getElementById("PayPal").setAttribute("hidden", "hidden");
+        document.getElementById("PayPal").setAttribute("disabled", "disabled");
     }else{
         document.getElementById("PayPal").removeAttribute("hidden");
+        document.getElementById("PayPal").removeAttribute("disabled");
+
         document.getElementById("Card").setAttribute("hidden", "hidden");
+        document.getElementById("Card").setAttribute("disabled", "disabled");
     }
+}
+
+function orderDetails(id){
+    window.location.href = "orderDetails.php?id=" + id;
 }

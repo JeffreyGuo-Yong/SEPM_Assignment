@@ -19,7 +19,7 @@
         <div class="options">
             <ul>
                 <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="contactInformation.html" target="indexIframe">Content us</a> </li>
-                <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="saleHistory.html" target="indexIframe">Sale History</a> </li>
+                <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="saleHistory.php" target="indexIframe">Sale History</a> </li>
             </ul>
         </div>
     </div>

@@ -21,8 +21,8 @@ session_start();
 <div class="mainLeft">
     <ul>
         <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="orderDiary.php" target="userIframe">Order Diary</a> </li>
-        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="">Order History</a> </li>
-        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="">My Feedback</a> </li>
+        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="orderHistory.php" target="userIframe">Order History</a> </li>
+        <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="feedback.php" target="userIframe">My Feedback</a> </li>
         <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="address.php" target="userIframe">My Address</a> </li>
         <li onmouseover="changeToGray(this)" onmouseout="changeToNon(this)"> <a href="payment.php" target="userIframe">My Payment</a> </li>
     </ul>

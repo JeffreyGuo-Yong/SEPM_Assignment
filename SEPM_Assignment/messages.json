@@ -34,5 +34,11 @@
   },
   "paymentUpdateFailed" : {
     "content" : "Update Payment Method Failed"
+  },
+  "orderSuccess" : {
+    "content" : "Order Diary Success"
+  },
+  "orderFailed" : {
+    "content" : "Order Diary Failed"
   }
 }

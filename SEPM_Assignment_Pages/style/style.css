@@ -237,7 +237,7 @@ body{
 .historyContent .diary{
     border-right: gainsboro solid thin;
     width: 48%;
-    height: 56%;
+    height: 60%;
     float: left;
     margin-left: 0.5%;
 }
@@ -245,9 +245,16 @@ body{
     list-style: none;
     margin-top: 2%;
 }
+.historyContent .diary .color1{
+    float: left;
+    margin-top: 0;
+}
+.historyContent .diary .color2{
+    float: left;
+}
 .historyContent .information{
     width: 48%;
-    height: 56%;
+    height: 60%;
     float: left;
     margin-left: 1.5%;
 }
@@ -259,11 +266,18 @@ body{
     border-top: gainsboro solid thin;
     width: 100%;
     height: 30%;
-    margin-top: 15%;
+    margin-top: 16%;
 }
 .historyContent .feedback div{
     word-break: break-word;
     font-size: 15px;
+}
+.historyContent .showColor{
+    border: black solid thin;
+    width: 50px;
+    height: 20px;
+    margin-left: 27%;
+    margin-top: 2%;
 }
 /* --------------------  register page -------------------- */
 .registerBody{
@@ -426,6 +440,13 @@ body{
 }
 .orderDiaryContent .buttonDiv{
     text-align: center;
+}
+.orderDiaryMain .message{
+    text-align: center;
+    font-size: 20px;
+    color: crimson;
+    margin-top: -2%;
+    margin-bottom: 1%;
 }
 /* --------------------  address page -------------------- */
 .addressMain{
@@ -635,4 +656,134 @@ body{
     padding-top: 1.78%;
     font-size: 15px;
     float: left;
+}
+/* --------------------  order history page -------------------- */
+.orderHistoryMain{
+    width: 100%;
+    height: 100%;
+}
+.orderHistoryMain .noRecord{
+    margin-top: 2%;
+    text-align: center;
+}
+.orderHistoryMain .noRecord p{
+    font-size: 20px;
+}
+.orderHistoryMain .order{
+    margin-top: 2%;
+}
+.orderHistoryMain .order table{
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 65%;
+    margin: 0 auto;
+    background-color: #cccccc;
+}
+.orderHistoryMain .order table th{
+    background-color:#ffffff;
+    line-height:150%;
+}
+.orderHistoryMain .order table td{
+    background-color:#ffffff;
+    line-height:150%;
+}
+.orderHistoryMain .order .button{
+    text-align: center;
+    width: 80px;
+}
+.orderHistoryMain .order .button button{
+    background: whitesmoke;
+    width: 60px;
+    height: 25px;
+    font-size: 15px;
+}
+/* --------------------  order details page -------------------- */
+.orderDetailsMain{
+    width: 100%;
+    height: 100%;
+}
+.orderDetailsMain .showColor{
+    border: black solid thin;
+    width: 50px;
+    height: 20px;
+}
+.orderDetailsMain table{
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 3%;
+    background-color: #cccccc;
+}
+.orderDetailsMain table th{
+    background-color:#ffffff;
+    line-height:150%;
+}
+.orderDetailsMain table td{
+    background-color:#ffffff;
+    line-height:150%;
+}
+.orderDetailsMain .button{
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: center;
+}
+.orderDetailsMain button{
+    background: whitesmoke;
+    width: 90px;
+    height: 35px;
+    font-size: 15px;
+}
+/* --------------------  feedback page -------------------- */
+.feedbackMain{
+    width: 100%;
+    height: 100%;
+}
+.feedbackMain .noRecord{
+    margin-top: 2%;
+    text-align: center;
+}
+.feedbackMain .showColor{
+    border: black solid thin;
+    width: 50px;
+    height: 20px;
+}
+.feedbackMain table{
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 3%;
+    background-color: #cccccc;
+}
+.feedbackMain table th{
+    background-color:#ffffff;
+    line-height:150%;
+}
+.feedbackMain table td{
+    background-color:#ffffff;
+    line-height:150%;
+}
+.feedbackMain .button{
+    margin-top: 2%;
+    text-align: center;
+}
+.feedbackMain button{
+    background: whitesmoke;
+    width: 90px;
+    height: 35px;
+    font-size: 15px;
+}
+.feedbackMain textarea{
+    height: 60px;
+    width: 75.3%;
+    float: left;
+    resize: none;
+    font-size: 16px;
 }

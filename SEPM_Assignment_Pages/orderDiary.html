@@ -9,13 +9,16 @@
 <body class="orderDiaryBody" onload="paperColorType();getTotalPrice()">
 
     <div class="orderDiaryMain">
+
+        <div class="message">Order Result</div>
+
         <div class="orderDiaryContent">
             <form>
                 <div class="orderDiaryLeft">
 
                     <div class="title">Create Diary</div>
                     <div class="paperColorType">
-                        <div class="inputTitle">Paper Color Type:</div>
+                        <div class="inputTitle">Cover Color Type:</div>
                         <div class="paperColorTypeOption">
                             <input type="radio" name="paperColorType" value="color" onclick="changePaperColorType()" checked="checked"><span>Color</span>
                             <input type="radio" name="paperColorType" value="theme" onclick="changePaperColorType()"><span>Theme</span>
@@ -23,12 +26,12 @@
                     </div>
                     <div class="clear"></div>
                     <div class="paperColor">
-                        <div class="inputTitle">Paper Color:</div>
+                        <div class="inputTitle">Cover Color:</div>
                         <input id="paperColor" type="color">
                     </div>
                     <div class="clear"></div>
                     <div class="paperTheme">
-                        <div class="inputTitle">Paper Theme:</div>
+                        <div class="inputTitle">Cover Theme:</div>
                         <select id="paperTheme">
                             <option>Test1</option>
                         </select>
@@ -37,14 +40,14 @@
                     <div class="paperType">
                         <div class="inputTitle">Paper Type:</div>
                         <div class="paperTypeOption">
-                            <input type="radio" name="paperType" value="plain"><span>Plain</span>
+                            <input type="radio" name="paperType" value="plain" checked="checked"><span>Plain</span>
                             <input type="radio" name="paperType" value="lined"><span>Lined</span>
                             <input type="radio" name="paperType" value="dotted"><span>Dotted</span>
                         </div>
                     </div>
                     <div class="clear"></div>
                     <div class="coverColor">
-                        <div class="inputTitle">Cover Color:</div>
+                        <div class="inputTitle">Paper Color:</div>
                         <input type="color">
                     </div>
                     <div class="clear"></div>
@@ -56,6 +59,7 @@
                     <div class="diaryPrice">
                         <div class="inputTitle">Unit Price:</div>
                         <div id="diaryPrice" class="price"></div>
+                        <input id="unitPrice" type="text" name="unitPrice">
                     </div>
 
                 </div>
@@ -65,7 +69,7 @@
                     <div class="title">Order Details</div>
                     <div class="quantity">
                         <div class="inputTitle">Quantity:</div>
-                        <input id="quantity" type="number" value="0" onchange="getTotalPrice(this)">
+                        <input id="quantity" type="number" value="1" min="1" onchange="getTotalPrice()">
                     </div>
                     <div class="paymentMethod">
                         <div class="inputTitle">Payment Method:</div>
@@ -92,10 +96,12 @@
                     <div class="postage">
                         <div class="inputTitle">Postage:</div>
                         <div class="price">$10</div>
+                        <input id="postage" type="text" name="postage" value="10">
                     </div>
                     <div class="totalPrice">
                         <div class="inputTitle">Total Price:</div>
                         <div id="totalPrice" class="price"></div>
+                        <input id="totalPriceInput" type="text" name="totalPrice">
                     </div>
 
                 </div>
@@ -105,7 +111,6 @@
                 </div>
             </form>
         </div>
-
     </div>
 
 </body>
