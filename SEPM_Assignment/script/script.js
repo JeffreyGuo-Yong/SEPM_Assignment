@@ -137,3 +137,41 @@ function changePaymentOption() {
 function orderDetails(id){
     window.location.href = "orderDetails.php?id=" + id;
 }
+
+function adminOrderDetails(id){
+    window.location.href = "adminOrderDetails.php?id=" + id;
+}
+
+function adminBlockUser(id){
+    var choose = confirm("Confirm to lock this user?");
+    if(choose){
+        window.location.href = "adminUpdateUserController.php?id=" + id + "&type=block";
+    }
+}
+
+function adminUnblockUser(id){
+    var choose = confirm("Confirm to unlock this user?");
+    if(choose){
+        window.location.href = "adminUpdateUserController.php?id=" + id + "&type=unblock";
+    }
+}
+
+function adminEditFeedback(id){
+    window.location.href = "adminUpdateFeedback.php?id=" + id;
+}
+
+function addAdmin(){
+    var username = document.getElementById('username').value;
+    var pattern = /admin.+/;
+    var result = pattern.test(username);
+    if(result){
+        return true;
+    }else{
+        alert("The administrator username must begin with 'admin'.");
+        return false;
+    }
+}
+
+function adminEditDairy(id){
+    window.location.href = "updateDesign.php?id=" + id;
+}

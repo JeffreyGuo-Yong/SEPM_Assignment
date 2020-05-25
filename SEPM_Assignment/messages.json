@@ -40,5 +40,29 @@
   },
   "orderFailed" : {
     "content" : "Order Diary Failed"
+  },
+  "userUpdateSuccess" : {
+    "content" : "Update Account Status Success"
+  },
+  "userUpdateFailed" : {
+    "content" : "Update Account Status Failed"
+  },
+  "feedbackUpdateSuccess" : {
+    "content" : "Update Feedback Success"
+  },
+  "feedbackUpdateFailed" : {
+    "content" : "Update Feedback Failed"
+  },
+  "addAdminSuccess" : {
+    "content" : "Add Administrator Success"
+  },
+  "addAdminFailed" : {
+    "content" : "Add Administrator Failed"
+  },
+  "diaryUpdateSuccess" : {
+    "content" : "Update Diary Success"
+  },
+  "diaryUpdateFailed" : {
+    "content" : "Update Diary Failed"
   }
 }

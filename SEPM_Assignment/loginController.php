@@ -12,7 +12,10 @@ $id = login($email, $password);
 if(is_numeric($id) == 1){
     $_SESSION['id'] = $id;
     header("location:userIndex.php");
-}else{
+} else if (strpos($id, 'admin') !== false){
+    $_SESSION['adminName'] = $id;
+    header("location:adminIndex.php");
+} else{
     $error = getMessage($id);
     header("location:login.php?message=$error");
 }

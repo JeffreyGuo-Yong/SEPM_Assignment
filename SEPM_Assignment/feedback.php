@@ -23,7 +23,7 @@ $diaryResult = getDiaryByUserID($id);
             echo "</div>";
         }else{
             while($diary = $diaryResult->fetch_assoc()){
-                echo "<div class=\"feedback\">";
+                echo "<div class='feedback'>";
                 echo "<table>";
 
                 echo "<tr>";
@@ -32,7 +32,7 @@ $diaryResult = getDiaryByUserID($id);
 
                 echo "<tr>";
                 echo "<td colspan='2'>Cover Color Type:</td>";
-                echo "<td colspan='2'>" . $diary['d_type'] . "</td>";
+                echo "<td colspan='2'>" . $diary['type'] . "</td>";
                 echo "</tr>";
 
                 echo "<tr>";
@@ -56,7 +56,7 @@ $diaryResult = getDiaryByUserID($id);
                     echo "<form action='addFeedbackController.php' method='post'>";
 
                     echo "<td colspan='4'>";
-                    echo "<textarea name='content' placeholder=\"Please give your feedback.\"></textarea>";
+                    echo "<textarea name='content' placeholder='Please give your feedback.'></textarea>";
                     echo "<input name='id' hidden='hidden' value='" . $diary['id'] . "'>";
                     echo "<div class='button'>";
                     echo "<button type='submit'>Reply</button>";

@@ -9,7 +9,6 @@
 <body class="loginBody">
 
 <div class="loginMain">
-
     <form action="loginController.php" method="post">
         <div class="username">
             <input class="input" type="text" placeholder="Login ID" name="email">

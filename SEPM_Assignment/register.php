@@ -22,9 +22,6 @@
         <div>
             <button class="button" type="submit">Register</button>
         </div>
-        <div class="message">
-
-        </div>
     </form>
 </div>
 
